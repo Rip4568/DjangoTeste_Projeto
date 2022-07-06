@@ -86,7 +86,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
@@ -117,10 +117,6 @@ STATIC_ROOT = 'staticfiles/'
 
 #MEDIA_URL = 'media/'
 #MEDIA_ROOT = 'media/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'Teste_app/static'),
-]
 
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage' 
