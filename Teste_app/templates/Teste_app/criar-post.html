@@ -1,0 +1,12 @@
+{% extends "Teste_app/base.html" %}
+
+{% block title %}Criação de posts{% endblock title %}
+
+{% block main %}
+    <h1>Crie seu post</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Criar novo post para todos verem!</button>
+    </form>
+{% endblock main %}

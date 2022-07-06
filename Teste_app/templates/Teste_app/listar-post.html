@@ -1,0 +1,20 @@
+{% extends "Teste_app/base.html" %}
+
+{% block title %}
+    Listagem de posts
+{% endblock title %}
+
+{% block main %}
+    <h1>Listagem dos posts</h1>
+    <form action="/listar-post/" method="get">
+        {% csrf_token %}
+        <input type="submit" value="apagar posts" name="apagar-post" id="apagar-post">
+    </form>
+    {% for post in posts %}
+        <h3>{{post.nome}}</h3>
+        <p><img src="{{post.imagem.url}}" alt="" srcset=""></p>
+        {% comment "Resolver o erro das imagens não carregando" %}
+            <img src="{{post.imagem}}" alt="">
+        {% endcomment %}
+    {% endfor %}
+{% endblock main %}
