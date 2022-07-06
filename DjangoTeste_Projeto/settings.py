@@ -86,7 +86,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(ssl_require=True,conn_max_age=600)
+DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
